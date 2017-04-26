@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('error') {
       steps {
         parallel(
           "Build_Code_ATSC": {
@@ -13,7 +13,7 @@ pipeline {
             
           },
           "Build_Code_ISDB": {
-            build 'test'
+            sh 'echo \'test2\''
             
           }
         )
